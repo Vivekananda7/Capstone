@@ -3,11 +3,11 @@
 This is an Udacity Data Science capstone Project. Here a fictitious company "Sparkify", aims to identify churns of the customers.
 
 Table of Contents
-# 1.Installation
-# 2.Project_Motivation
-# 3.File Description
-# 4.Results
-# 5.Conclusion
+1.Installation
+2.Project_Motivation
+3.File Description
+4.Results
+5.Conclusion
 
 # Installation 
 
