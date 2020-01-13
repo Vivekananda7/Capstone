@@ -1,43 +1,30 @@
-# Capstone
+# Sparkify_Capstone
 
-# Sparkify project
+This is an Udacity Data Science capstone Project. Here a fictitious company "Sparkify", aims to identify churns of the customers.
+
 Table of Contents
-Installation
-Project Motivation
-Files Description
-Result
-Licensing, Authors, and Acknowledgements
-Installation
-This project uses the following software and Python libraries:
+# 1.Installation
+# 2.Project_Motivation
+# 3.File Description
+# 4.Results
+# 5.Conclusion
 
-Python
+# Installation 
 
-Spark
-
-Pyspark
-
-pandas
-
-Matplotlib
-
-Seaborn
-
-You will also need to have software installed to run and execute a Jupyter Notebook.
-
-If you do not have Python installed yet, it is highly recommended that you install the Anaconda distribution of Python, which already has the above packages and more included. And for Spark, you can do this using AWS or IBM Cloud.
+Python 3 is required for this Project.*.
 
 # Project Motivation
-This is udacity's capstone project, using spark to analyze user behavior data from music app Sparkify.
 
-Sparkify is a music app, this dataset contains two months of sparkify user behavior log. The log contains some basic information about the user as well as information about a single action. A user can contain many entries. In the data, a part of the user is churned, through the cancellation of the account behavior can be distinguished.
+Sparkify is a fictitious music company which provides free subscription to customers for a certain months. Post that the customer needs to renew his/her subscription. One who doesn't renew subscription is defined as a churn. This project aims to identify potential churned customers and features that might lead to churn. The underlined customer dataset is huge (12GB), so we would be using a subset of this dataset and Spark Machine Learning Models are to be used deal with Big Data. Exploratory Analysis would be done to find fruitful insights. Feature Engineering is to be used to create new additional features. Machine Learning models like Gradient Boost Classifier, Logistic Regression, Support Vector Machine and Random Forest are to be used to predict churn. Accuracy and F1-Score are the two metrics to be referred to select the best model.
 
-# Files Description
-Sprakify .ipynb Main file of the project, it demonstrates the process of using pyspark to explore the data and build the model.
+# File Descriptions 
 
-# Result
-According to the results of the model, it is the frequency of Thumbs Down that has the greatest impact. Churn users have more Thumbs Down. Naturally, users will leave if they are not satisfied.
+Sparkify.ipynb is an iPython Notebook used for this project.
 
-I post a blog about the detail, you can find it here.
+# Results
 
-# Licensing, Authors, Acknowledgements
-Must give credit to Udacity for the project. You can't use this for you Udacity capstone project. Otherwise, feel free to use the code here as you would like!
+Gradient Boost Classifier, Logistic Regression, Support Vector Machine and Random Forest Classifiers are used to predict churn. Logistic Regression out-performed other models in terms of Accuracy and F1-Score. Grid Search along with Cross validation is used to tune the hyperparameters and further important variables are also identified. For details refer to the post https://medium.com/@nandaprakash963/sparkify-customers-churn-prediction-d0194afcdb04
+
+# Conclusion
+
+In this project, we aimed to predict the churn of customer. The customer dataset is huge (12 GB) so we used only a subset of the dataset, Big Data Tool Spark is used to deal with such a huge dataset. In the data exploration step, we removed duplicates in userid and missing userid. We also looked into the distribution of Subscription status across gender and payment status. In Feature Engineering we created derived fields like Average file length per session, Session duration, Session count, the total subscription days, number of thumbs-up, number of thumbs-down, number of friend invitations, number of listened-to files per session. We subsetted the data with 60% training and rest 40% into two equal parts: crossvalidation and test. We used Gradient Boost Classifier, Logistic Regression, Support Vector Machine and RandomForest to predict the churn of customer. Logistic Regression out-performed other models in terms of accuracy and F1-Score. So, we used Grid Search along with Gradient Descent to fine tune the hyper-parameters and obtained an accuracy of 0.79 and F1-Score of 0.74. We also identified the variable of importance from the model like gender, add_friend, error, home, roll_advert, settings, mean_session_hr so that Sparkify can pay more attention to these features. Thus we were successful in predicting churn of customers.
